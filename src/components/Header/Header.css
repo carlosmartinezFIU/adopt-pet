@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+
+.header-wrapper{
+    height: 400px;
+}
+
+.header-image-container{
+    width: 100%;
+    height: 100%;
+    object-fit: unset;
+}
+
+.puppy-image{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+
+}
+
+.header-description{
+    position: relative;
+    top: -268px;
+    margin: auto;
+    width: 550px;
+    font-size: 39px;
+    font-family: 'Abril Fatface', cursive;
+    color: #fff;
+}

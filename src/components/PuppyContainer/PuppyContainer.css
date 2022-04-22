@@ -1,0 +1,9 @@
+.puppy-container-wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    row-gap: 54px;
+    background-color: #389dcd;
+    max-width: 1272px;
+    justify-content: space-around;
+}

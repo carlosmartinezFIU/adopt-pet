@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+
+
+.title-container{
+    display: flex;
+    width: 250px;
+    font-size: 55px;
+    margin: auto;
+    font-family: 'Abril Fatface', cursive;
+}
+
+.pet-title{
+    margin-right: 25px;
+    color: #389dcd;
+}
+
+.paw-container{
+    position: absolute;
+    top: 9px;
+    left: 80px;
+}
+
+.paw{
+    width: 62px;
+    height: 60px;
+}
+.paw:hover{
+    filter: invert(68%) sepia(36%) saturate(3345%) hue-rotate(169deg) brightness(85%) contrast(87%);
+}

@@ -1,0 +1,37 @@
+.pet-card-wrapper{
+    width: 506px;
+    height: 230px;
+    border: 1px solid black;
+    position: relative;
+    display: flex;
+    box-shadow: 10px 5px 5px black;
+    background-color: #fff;
+    border-radius: 24px;
+}
+
+.pet-image-container{
+    width: 250px;
+    height: 230px;
+}
+
+.pet-image-container img{
+    width: 100%;
+    height: 100%;
+    border-top-left-radius: 23px;
+    border-bottom-left-radius: 23px;
+}
+
+.pet-name{
+    color: #000;
+    font-weight: 900;
+    margin-left: 41px;
+    font-size: 19px;
+}
+
+.pet-breed{
+    margin-left: 42px;
+}
+
+.pet-age{
+    margin-left: 42px;
+}

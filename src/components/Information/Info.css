@@ -1,0 +1,151 @@
+.info-wrapper{
+    height: 272px;
+    display: flex;
+}
+
+.description-container{
+    width: 646px;
+    margin-left: 143px;
+    text-align: center;
+    background-color: #389dcd;
+    height: 119px;
+    border-radius: 32px;
+    margin-top: 51px;
+    display: flex;
+}
+
+.pug-image-container img{
+    width: 100%;
+}
+
+.pug-image-container{
+    width: 300px;
+    position: relative;
+    top: -206px;
+    left: 48px;
+}
+
+.dog-logo{
+    width: 80px;
+    height: 80px;
+    margin-top: 26px;
+    margin-left: 18px;
+    cursor: pointer;
+}
+.dog-logo:hover{
+    filter: invert(71%) sepia(51%) saturate(690%) hue-rotate(346deg) brightness(97%) contrast(99%);
+
+}
+.dog-logo-clicked{
+    width: 80px;
+    height: 80px;
+    margin-top: 26px;
+    margin-left: 18px;
+    cursor: pointer;
+    filter: invert(71%) sepia(51%) saturate(690%) hue-rotate(346deg) brightness(97%) contrast(99%);
+
+}
+
+.cat-logo{
+    width: 69px;
+    height: 80px;
+    margin-top: 26px;
+    margin-left: 42px;
+    cursor: pointer;
+}
+.cat-logo:hover{
+    filter: invert(71%) sepia(51%) saturate(690%) hue-rotate(346deg) brightness(97%) contrast(99%);
+}
+.cat-logo-clicked{
+    width: 69px;
+    height: 80px;
+    margin-top: 26px;
+    margin-left: 42px;
+    cursor: pointer;
+    filter: invert(71%) sepia(51%) saturate(690%) hue-rotate(346deg) brightness(97%) contrast(99%);
+
+}
+
+
+.form-zipcode{
+    height: 46px;
+    margin-top: 44px;
+    margin-left: -2px;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.form-zipcode input{
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid black;
+    font-size: 15px;
+    
+  
+}
+
+.form-zipcode input:focus{
+    outline: none
+}
+
+
+.search-logo{
+    margin-left: 13px;
+    width: 23px;
+    position: relative;
+    top: 33px;
+    cursor: pointer;
+}
+
+.dog-title{
+    margin: 0px;
+    margin-left: 9px;
+}
+
+.cat-title{
+    width: 61px;
+    margin: 0px;
+    margin-left: 46px;
+}
+
+.car-input{
+    height: 22px;
+    position: relative;
+    top: 20px;
+}
+
+.zipcode-input{
+    position: relative;
+    top: 24px;
+}
+
+.pet-love-title{
+    font-size: 60px;
+    font-weight: 800;
+    color: #389dcd;
+}
+
+.cat-description{
+    line-height: 26px;
+    font-size: 17px;
+    font-weight: 500;
+    color: gray;
+}
+
+.circle-image-pet{
+    width: 250px;
+    height: 250px;
+    margin-left: 91px;
+    border-radius: 50%;
+    border: 1px black solid;
+    overflow: hidden; 
+}
+.circle-image-pet img{
+    object-fit: cover;
+}
+
+.cat-input{
+    height: 22px;
+    margin-top: 20px;
+}

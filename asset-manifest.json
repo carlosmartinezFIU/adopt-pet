@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/adopt-pet/static/css/main.4f919987.css",
-    "main.js": "/adopt-pet/static/js/main.18b908dd.js",
+    "main.js": "/adopt-pet/static/js/main.5c357063.js",
     "static/media/cat-pic.png": "/adopt-pet/static/media/cat-pic.3147a978e9546ee0303d.png",
     "static/media/dog-back.jpg": "/adopt-pet/static/media/dog-back.44b1e28f51727921203c.jpg",
     "static/media/pngwing.com.png": "/adopt-pet/static/media/pngwing.com.8cf6e8a127ace1b1be0c.png",
@@ -10,10 +10,10 @@
     "static/media/parrot.png": "/adopt-pet/static/media/parrot.3c85e3aeb24ef64e2ccc.png",
     "index.html": "/adopt-pet/index.html",
     "main.4f919987.css.map": "/adopt-pet/static/css/main.4f919987.css.map",
-    "main.18b908dd.js.map": "/adopt-pet/static/js/main.18b908dd.js.map"
+    "main.5c357063.js.map": "/adopt-pet/static/js/main.5c357063.js.map"
   },
   "entrypoints": [
     "static/css/main.4f919987.css",
-    "static/js/main.18b908dd.js"
+    "static/js/main.5c357063.js"
   ]
 }

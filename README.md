@@ -19,6 +19,8 @@ This outputs 20 individual animals. This project uses React js for the front end
 
 Node js was used to fetch the token given the APi key and Secret
 
+(front-display.png)
+
 
 
 # Getting Started with Create React App

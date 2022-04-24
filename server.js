@@ -1,4 +1,4 @@
-const port = process.env.NODE_ENV || 5001
+const port = process.env.PORT || 5001;
 const express = require('express')
 const cors = require('cors')
 const fetch = require('node-fetch')

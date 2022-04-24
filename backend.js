@@ -6,7 +6,9 @@ require('dotenv').config()
 
 
 const app = express();
-app.use(cors());
+app.use(cors({
+    origin: "https://adopt-pet01.herokuapp.com"
+}));
 
 
 /**
@@ -48,6 +50,6 @@ app.get("/data", async (req, res) =>{
 /**
  * Checks if the port is running
  */
-app.listen(5000, () =>{
-    console.log(`Server is running on port ${PORT}`);
+app.listen(port, () =>{
+    console.log(`Server is running on port ${port}`);
 })

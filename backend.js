@@ -1,4 +1,4 @@
-const PORT = 5000
+const port = process.env.PORT || 5001;
 const express = require('express')
 const cors = require('cors')
 const fetch = require('node-fetch')
@@ -6,7 +6,7 @@ require('dotenv').config()
 
 const app = express();
 app.use(cors({
-    origin: ['http://localhost:3000', 'https://carlosmartinezfiu.github.io']
+    origin: ['http://localhost:5000', 'https://carlosmartinezfiu.github.io']
     
 }));
 
@@ -32,9 +32,7 @@ const fetchData = async () =>{
         return data;    
 }
 
-app.get('/', (req, res) =>{
-    res.json("Home")
-})
+
 
 /**
  * Sends the token
@@ -46,9 +44,13 @@ app.get("/data", async (req, res) =>{
 
 })
 
+if(process.env.NODE_ENV === 'production'){
+    app.use(express.static('client/build'))
+}
+
 /**
  * Checks if the port is running
  */
-app.listen(5000, () =>{
-    console.log(`Server is running on port ${PORT}`);
+app.listen(port, () =>{
+    console.log(`Server is running on port ${port}`);
 })

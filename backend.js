@@ -7,7 +7,7 @@ require('dotenv').config()
 
 const app = express();
 app.use(cors({
-    origin: "https://adopt-pet01.herokuapp.com"
+    origin: ["https://adopt-pet01.herokuapp.com", "https://localhost:5001"]
 }));
 
 

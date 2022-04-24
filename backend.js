@@ -1,11 +1,8 @@
-const PORT = 5000
+const port = process.env.NODE_ENV || 5001
 const express = require('express')
 const cors = require('cors')
 const fetch = require('node-fetch')
 require('dotenv').config()
-
-
-
 
 
 const app = express();
@@ -33,9 +30,6 @@ const fetchData = async () =>{
         return data;    
 }
 
-app.get('/', (req, res) =>{
-    res.json("Home")
-})
 
 /**
  * Sends the token
@@ -46,6 +40,10 @@ app.get("/data", async (req, res) =>{
     //res.send(info)
 
 })
+
+  if(process.env.NODE_ENV === 'production'){
+      app.use(express.static('build'));
+  }
 
 /**
  * Checks if the port is running

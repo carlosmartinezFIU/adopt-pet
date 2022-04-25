@@ -5,6 +5,7 @@ import Info from "./components/Information/Info";
 import PuppyContainer from "./components/PuppyContainer/PuppyContainer";
 import Footer from "./components/Footer/Footer";
 import Navbar from "./components/Navbar/Navbar";
+import { response } from "express";
 
 
 function App() {
@@ -17,12 +18,27 @@ function App() {
  * Erorr will be given if there is a faulty token
  */
   useEffect(() =>{
-    axios.get("http://localhost:5000/data").then((response) => {
+      const getResult = async () =>{
+        try{
+            const thirdResult = await fetch("http://localhost:5000/data", {
+            headers:{
+              Authorization: `Bearer ${token}`,
+            },
+            })
+            const xxYY = await thirdResult.json();
+            console.log(response.data)
+        }catch(err){
+          console.log(err)
+        }
+      }
+      getResult();
+
+/*      axios.get("http://localhost:5000/data").then((response) => {
       //setToken(response.data.access_token)  
       console.log(response.data);
       setResult(response.data);
     })
-    .catch(error => console.log(`We can not find the data ${error}`))
+    .catch(error => console.log(`We can not find the data ${error}`))  */
 }, [])
 
 

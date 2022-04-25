@@ -7,7 +7,7 @@ require('dotenv').config()
 let port = process.env.PORT || 8080;
 app.use(cors(
     {
-        origin: "*"
+        origin: ["localhost:3000", "https://api.petfinder.com/v2/animals"]
     }
 ));
 
@@ -41,7 +41,6 @@ const fetchData = async () =>{
 app.get("/data", cors(), async (req, res) =>{
     const info  = await fetchData();
     res.send(info);
-    //res.send(info)
 
 })
 

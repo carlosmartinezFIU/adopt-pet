@@ -37,9 +37,8 @@ useEffect(() => {
       const petResultData = await fetch("https://api.petfinder.com/v2/animals", {
       headers: {
         Authorization: `Bearer ${token}`,
-        
+        origin: "*"
         },
-        mode: 'cors',
       
       })
       const jsonResult = await petResultData.json();

@@ -1,5 +1,6 @@
 const express = require('express')
 const app = express();
+const path = require('path')
 const cors = require('cors')
 const fetch = require('node-fetch');
 const { default: axios } = require('axios');
@@ -84,5 +85,5 @@ app.get("/data", cors(), async (req, res) =>{
  * Checks if the port is running
  */
 app.listen(port, () =>{
-    console.log(`Server is running on port ${PORT}`);
+    console.log(`Server is running on port ${port}`);
 })

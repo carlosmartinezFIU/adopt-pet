@@ -17,9 +17,8 @@ function App() {
  * Erorr will be given if there is a faulty token
  */
   useEffect(() =>{
-    axios.get("/data").then((response) => {
-      setToken(response.data.access_token)
-      
+    axios.get("http://localhost:5000/data").then((response) => {
+      setToken(response.data.access_token)  
     })
     .catch(error => console.log(`We can not find the data ${error}`))
 }, [])
@@ -38,13 +37,15 @@ useEffect(() => {
       const petResultData = await fetch("https://api.petfinder.com/v2/animals", {
       headers: {
         Authorization: `Bearer ${token}`,
+        
         },
+        mode: 'cors',
       
       })
       const jsonResult = await petResultData.json();
       setResult(jsonResult.animals);
   }catch(err){
-    <h3>...Loading</h3>
+    console.log("This is the erro" + err);
   }
   }
   fetchPetData();

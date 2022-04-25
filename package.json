@@ -22,7 +22,7 @@
   },
   "scripts": {
     "front": "react-scripts start",
-    "back": "nodemon backend.js",
+    "back": "nodemon server.js",
     "start": "node server.js",
     "build": "react-scripts build",
     "test": "react-scripts test",

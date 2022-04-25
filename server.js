@@ -5,12 +5,16 @@ require('dotenv').config()
 
 
 const app = express();
-app.use(cors({
-    origin: ["http://localhost:5000", "http://localhost:3000", 
-    "https://adopt-pet01.herokuapp.com/", "https://adopt-pet01.herokuapp.com"]
-}));
-
 let port = process.env.PORT || 5000;
+app.use(cors(
+    {
+        origin: ['https://api.petfinder.com/v2/animals',
+        'http://localhost:5000', 'http://localhost:3000', 'https://adopt-pet01.herokuapp.com']
+    }
+));
+
+
+
 /**
  * Make a call for a new token from the petfinder api
  * 

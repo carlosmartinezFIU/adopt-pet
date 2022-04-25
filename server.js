@@ -5,7 +5,7 @@ const fetch = require('node-fetch');
 const { default: axios } = require('axios');
 require('dotenv').config()
 
-const PORT = process.env.PORT || 5000;
+const port = process.env.PORT || 5000;
 app.use(cors({
     origin: '*'
 }))
@@ -83,6 +83,6 @@ app.get("/data", cors(), async (req, res) =>{
 /**
  * Checks if the port is running
  */
-app.listen(() =>{
+app.listen(port, () =>{
     console.log(`Server is running on port ${PORT}`);
 })

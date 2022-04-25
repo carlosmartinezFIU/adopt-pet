@@ -5,12 +5,13 @@ const fetch = require('node-fetch')
 require('dotenv').config()
 
 let port = process.env.PORT || 8080;
-app.use(cors(
-    {
-        origin: ["http://localhost:3000", "https://api.petfinder.com/v2/animals", 
-        "https://adopt-pet01.herokuapp.com", "http://localhost:8080/data", "http://localhost:8080"]
-    }
-));
+
+
+app.use(function(req, res, next) {
+    res.header("Access-Control-Allow-Origin", "*"); // update to match the domain you will make the request from
+    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+    next();
+  });
 
 
 
@@ -35,15 +36,44 @@ const fetchData = async () =>{
         return data;    
 }
 
+const getAnimals = async () =>{
+    const info = await fetchData();
 
-/**
- * Sends the token
- */
+    try{
+        const petResultData = await fetch("https://api.petfinder.com/v2/animals", {
+        headers: {
+            Authorization: `Bearer ${info.access_token}`,
+            },
+            
+        })
+        const jsonResult = await petResultData.json();
+         return jsonResult.animals;
+    }catch(err){
+        console.log("This is the erro" + err);
+    }
+    
+};
+
+
+
 app.get("/data", cors(), async (req, res) =>{
-    const info  = await fetchData();
+    const info  = await getAnimals();
+    console.log(info);
     res.send(info);
 
 })
+
+
+/**
+ * Sends the token
+ 
+app.get("/data", cors(), async (req, res) =>{
+    const info  = await fetchData();
+    console.log(info.access_token);
+    res.send(info);
+
+})
+*/
 
   if(process.env.NODE_ENV === 'production'){
       app.use(express.static('build'));

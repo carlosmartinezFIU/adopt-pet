@@ -18,7 +18,9 @@ function App() {
  */
   useEffect(() =>{
     axios.get("http://localhost:8080/data").then((response) => {
-      setToken(response.data.access_token)  
+      //setToken(response.data.access_token)  
+      console.log(response.data);
+      setResult(response.data);
     })
     .catch(error => console.log(`We can not find the data ${error}`))
 }, [])
@@ -27,7 +29,7 @@ function App() {
 /**
  * Inspects if there is an up to date token in state
  * If there is a validate token, fetching first page results from the Petfinder API
- */
+ 
 useEffect(() => {
   if(token === null){
     console.log("There was no token passed ")
@@ -94,3 +96,6 @@ const update = (data) =>{
 }
 
 export default App;
+
+
+

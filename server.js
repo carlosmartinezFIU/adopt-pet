@@ -1,7 +1,8 @@
 const express = require('express')
 const app = express();
 const cors = require('cors')
-const fetch = require('node-fetch')
+const fetch = require('node-fetch');
+const { default: axios } = require('axios');
 require('dotenv').config()
 
 let port = process.env.PORT || 8080;
@@ -56,6 +57,7 @@ app.get("/data", cors(), async (req, res) =>{
     const info  = await getAnimals();
     console.log(info);
     res.send(info);
+
 
 })
 

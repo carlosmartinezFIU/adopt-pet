@@ -7,7 +7,7 @@ require('dotenv').config()
 let port = process.env.PORT || 8080;
 app.use(cors(
     {
-        origin: ["localhost:3000", "https://api.petfinder.com/v2/animals"]
+        origin: ["localhost:3000", "https://api.petfinder.com/v2/animals", "https://adopt-pet01.herokuapp.com"]
     }
 ));
 

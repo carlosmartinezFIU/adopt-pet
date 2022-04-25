@@ -54,7 +54,7 @@ const getAnimals = async () =>{
 
 
 
-app.get("/data", cors(), async (req, res) =>{
+app.get("/data", async (req, res) =>{
     const info  = await getAnimals();
     console.log(info);
     res.send(info);

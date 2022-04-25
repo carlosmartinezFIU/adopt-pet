@@ -17,7 +17,7 @@ function App() {
  * Erorr will be given if there is a faulty token
  */
   useEffect(() =>{
-    axios.get("/data").then((response) => {
+    axios.get("http://localhost:5000/data").then((response) => {
       //setToken(response.data.access_token)  
       console.log(response.data);
       setResult(response.data);

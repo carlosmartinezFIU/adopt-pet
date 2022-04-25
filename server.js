@@ -6,7 +6,8 @@ require('dotenv').config()
 
 const app = express();
 app.use(cors({
-    origin: ["http://localhost:5000", "http://localhost:3000", "https://adopt-pet01.herokuapp.com/"]
+    origin: ["http://localhost:5000", "http://localhost:3000", 
+    "https://adopt-pet01.herokuapp.com/", "https://adopt-pet01.herokuapp.com"]
 }));
 
 let port = process.env.PORT || 5000;
@@ -37,7 +38,7 @@ const fetchData = async () =>{
  */
 app.get("/data", async (req, res) =>{
     const info  = await fetchData();
-    res.jsonp(info);
+    res.send(info);
     //res.send(info)
 
 })

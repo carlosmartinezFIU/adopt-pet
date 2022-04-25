@@ -1,15 +1,13 @@
 const express = require('express')
+const app = express();
 const cors = require('cors')
 const fetch = require('node-fetch')
 require('dotenv').config()
 
-
-const app = express();
-let port = process.env.PORT || 5000;
+let port = process.env.PORT || 8080;
 app.use(cors(
     {
-        origin: ['https://api.petfinder.com/v2/animals',
-        'http://localhost:5000', 'http://localhost:3000', 'https://adopt-pet01.herokuapp.com']
+        origin: "*"
     }
 ));
 
@@ -40,7 +38,7 @@ const fetchData = async () =>{
 /**
  * Sends the token
  */
-app.get("/data", async (req, res) =>{
+app.get("/data", cors(), async (req, res) =>{
     const info  = await fetchData();
     res.send(info);
     //res.send(info)

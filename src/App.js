@@ -17,7 +17,7 @@ function App() {
  * Erorr will be given if there is a faulty token
  */
   useEffect(() =>{
-    axios.get("/data").then((response) => {
+    axios.get("http://localhost:8080/data").then((response) => {
       setToken(response.data.access_token)  
     })
     .catch(error => console.log(`We can not find the data ${error}`))
@@ -71,8 +71,6 @@ const update = (data) =>{
       })
       const jsonUpdate = await petResultUpdate.json();
       setResult(jsonUpdate.animals);
-      console.log("This is zip " + data.zipcode);
-      console.log("This is animal " + data.pet);
   }catch(err){
     <h3>...Loading</h3>
   }

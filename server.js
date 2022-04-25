@@ -5,7 +5,7 @@ const fetch = require('node-fetch');
 const { default: axios } = require('axios');
 require('dotenv').config()
 
-let port = process.env.PORT || 8080;
+const port = process.env.PORT || 5000;
 app.use(cors({
     origin: '*'
 }))
